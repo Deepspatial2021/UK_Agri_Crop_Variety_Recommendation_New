@@ -9,13 +9,12 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
-from PIL import Image
 import plotly.graph_objects as go
 
 st.set_page_config(page_title='Crop Recommendation Model',layout='wide')
 
 model=joblib.load("Crop Recommender v2.sav")
-#soil_df=pd.read_excel("Model Input & Master Sheet for Apps.xlsx",sheet_name="Main V2  Fertilizer Recommendat")
+perform_df=pd.read_csv("Model Performance.csv")
 env_df=pd.read_excel("new data.xlsx")
 env_df=env_df.dropna()
 
@@ -119,15 +118,11 @@ if st.button("Predict",use_container_width=True):
     variety_list=[variety_dict[c] for c in crop_list]
     display_df=pd.DataFrame(zip(crop_list,variety_list),columns=["Recommended Crop","Variety"],index=range(1,len(crop_list)+1))
     st.dataframe(display_df,use_container_width=True)   
+
+x1,x2,x3=st.columns(3)
+with x2:
+    st.dataframe(perform_df)
     
-st.header("")
-image = Image.open('deepspatial.jpg')
-image_1=image.resize((180,30))
-
-cen1,cen2,cen3,cen4,cen5=st.columns(5)
-with cen3:
-    st.image(image_1)
-
 
 
 
