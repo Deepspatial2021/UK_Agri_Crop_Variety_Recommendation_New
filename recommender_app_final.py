@@ -36,7 +36,7 @@ variety_dict={"Horticulture":" Mango, Litchi, Malta, Oranges, Lemon, Aonla, Guav
 # Header Display
 
 st.markdown('<div style="text-align: center; color:#004F92 ;font-size:40px; font-weight:bold">Agriverse Platform</div>', unsafe_allow_html=True)
-st.markdown('<div style="background-color:#00609C;padding:7px"> <h2 style="color:white;text-align:center;">Crop Recommendation</h2> </div>',unsafe_allow_html=True)
+st.markdown('<div style="background-color:#00609C;padding:7px"> <h2 style="color:white;text-align:center;">Crop Advisory</h2> </div>',unsafe_allow_html=True)
 st.header("")
 
 
