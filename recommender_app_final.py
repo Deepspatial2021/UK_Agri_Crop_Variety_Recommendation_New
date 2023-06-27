@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 
-st.set_page_config(page_title='Crop Recommendation Model',layout='wide')
+st.set_page_config(page_title='Crop Advisory Model',layout='wide')
 
 model=joblib.load("Crop Recommender v2.sav")
 perform_df=pd.read_csv("Model Performance.csv")
