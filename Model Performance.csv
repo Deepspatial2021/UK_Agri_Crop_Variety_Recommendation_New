@@ -1,4 +1,5 @@
 Model,Accuracy
+
 Random Forest,96
 SVC,69
 Naive Bayes,62
